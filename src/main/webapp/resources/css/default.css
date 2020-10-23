@@ -1,0 +1,129 @@
+body {
+    /*   background-image:  url('../Images/Hotel2.png');*/
+ background-image:  url('https://wilcity.com/wp-content/uploads/2019/09/hotel-da-sogno-cover.jpg');
+ background-size: cover;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 10px;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 1px solid #AFAFAF; 
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #D20005;
+}
+
+a:link, a:visited {
+  color: #045491;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+  color: #045491;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+.testClass {
+    color: green;
+    font-size: 3em;
+    background-color:black;
+    width:48.5%;
+    height:350px;
+    background-image: url("resources/Images/hotel.jpg");
+
+}
+
+
+.TestMe2 {
+    color:whitesmoke;
+    width:75px;
+    height:50px;
+    background-color:black!important;
+}
+ .centered{
+     padding-left: 20px;
+     padding-right:20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 400px;
+                height: 200px;
+                margin: auto;
+                margin-left: -200px;
+                margin-top: -150px;
+            }
+            
+            .mybackground {
+               background-image:url('https://wilcity.com/wp-content/uploads/2019/09/hotel-da-sogno-cover.jpg'); 
+            }
+            
+            .niceimage{
+                width:100%;
+                height:100%;
+            }
+            
+            .makeMeDark{
+                background-color: black!important;
+            }
+  
+            
+            
+            /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
