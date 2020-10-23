@@ -12,10 +12,12 @@ import java.util.Date;
  * @author rodoc
  */
 public class Empleado {
+
+    private int id;
     private String cedula;
     private String nombre;
     private String apellido;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     private String correo;
     private String telefono;
     private Boolean tieneLicencia;
@@ -23,7 +25,8 @@ public class Empleado {
     public Empleado() {
     }
 
-    public Empleado(String Cedula, String Nombre, String Apellido, Date FechaNacimiento, String Correo, String Telefono, Boolean TieneLicencia) {        
+    public Empleado(int Id, String Cedula, String Nombre, String Apellido, String FechaNacimiento, String Correo, String Telefono, Boolean TieneLicencia) {
+        this.id = Id;
         this.cedula = Cedula;
         this.nombre = Nombre;
         this.apellido = Apellido;
@@ -31,6 +34,14 @@ public class Empleado {
         this.correo = Correo;
         this.telefono = Telefono;
         this.tieneLicencia = TieneLicencia;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCedula() {
@@ -57,12 +68,12 @@ public class Empleado {
         this.apellido = apellido;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento.toString();
     }
 
     public String getCorreo() {
@@ -88,7 +99,5 @@ public class Empleado {
     public void setTieneLicencia(Boolean tieneLicencia) {
         this.tieneLicencia = tieneLicencia;
     }
-
-
 
 }

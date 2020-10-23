@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Edita Empleado</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./../resources/templates/plantilla.xhtml">
+            <ui:define name="content">
+                <h:form id="editaEmpleadoForm">
+                    <b:container fluid="true">
+                        <b:panel title="Empleados" look="primary">
+                            <b:row tooltip="La identificacion no se modifica">
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="id" for="id"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Identificacion" id="id"
+                                                 value="#{empleadoController.id}"
+                                                 />                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="id"/>
+                                </b:column>
+                            </b:row>
+                            <b:row tooltip="La cedula no se modifica">
+                                <b:column medium-screen="2">
+                                    <h:outputLabel value="cedula" for="cedula"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="cedula" id="cedula"
+                                                 value="#{empleadoController.cedula}"
+                                                 />                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="cedula"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Nombre:"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Nombre" id="nombre" required="true"
+                                                 value="#{empleadoController.nombre}" 
+                                                 autocomplete="false"/>                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="nombre"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Apellido:"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Apellido" id="apellido" required="true"
+                                                 value="#{empleadoController.apellido}" 
+                                                 autocomplete="false"/>                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="apellido"/>
+                                </b:column>
+                            </b:row>
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Correo:"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Correo" id="correo" required="true"
+                                                 value="#{empleadoController.correo}" 
+                                                 autocomplete="false"/>                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="apellido"/>
+                                </b:column>
+                            </b:row>
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="Telefono:"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="Telefono" id="telefono" required="true"
+                                                 value="#{empleadoController.telefono}" 
+                                                 autocomplete="false"/>                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="apellido"/>
+                                </b:column>
+                            </b:row>
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="tieneLicencia"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="tieneLicencia" id="tieneLicencia" required="true"
+                                                 value="#{empleadoController.tieneLicencia}" 
+                                                 autocomplete="false"/>                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="tieneLicencia">
+                                    <b:message for="tieneLicencia"/>
+                                </b:column>
+                            </b:row>
+
+
+                            <b:row>
+                                <b:column medium-screen="2">
+                                    <h:outputText value="fechaNacimiento"/>                                    
+                                </b:column>
+                                <b:column medium-screen="4">
+                                    <b:inputText placeholder="fechaNacimiento" id="fechaNacimiento" required="true"
+                                                 value="#{empleadoController.fechaNacimiento}" 
+                                                 autocomplete="false"/>                                    
+                                </b:column>
+                                <b:column medium-screen="6" style-class="message">
+                                    <b:message for="fechaNacimiento"/>
+                                </b:column>
+                            </b:row>
+
+
+                            <b:row>
+                                <b:column medium-screen="2"/>
+                                <b:column medium-screen="4">
+                                    <b:commandButton value="Ingresar"
+                                                     look="primary" 
+                                                     style="width: 33%" 
+                                                     action="#{empleadoController.insertar()}">
+                                    </b:commandButton>
+                                    <b:commandButton value="Actualizar" 
+                                                     look="success" 
+                                                     style="width: 33%"
+                                                     action="#{empleadoController.modificar()}">
+
+                                    </b:commandButton>
+
+                                    <b:commandButton value="Eliminar" 
+                                                     look="danger" 
+                                                     style="width: 33%"
+                                                     action="#{empleadoController.eliminar()}">
+                                    </b:commandButton>
+                                </b:column>
+                            </b:row>
+
+                        </b:panel>
+                    </b:container>
+                </h:form>                
+            </ui:define>
+        </ui:composition>
+
+    </h:body>
+</html>
