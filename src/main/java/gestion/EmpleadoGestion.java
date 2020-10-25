@@ -78,7 +78,7 @@ public class EmpleadoGestion {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(EstudianteGestion.class.getName()).
+            Logger.getLogger(EmpleadoGestion.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
         return estudiante;
@@ -99,7 +99,7 @@ public class EmpleadoGestion {
             sentencia.setString(8, empleado.getTieneLicencia()? "1" : "0");
             return sentencia.executeUpdate() > 0;
         } catch (SQLException ex) {
-            Logger.getLogger(EstudianteGestion.class.getName()).
+            Logger.getLogger(EmpleadoGestion.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
         return false;
@@ -121,7 +121,7 @@ public class EmpleadoGestion {
             sentencia.setString(7, empleado.getTieneLicencia()? "1" : "0");
             return sentencia.executeUpdate() > 0;
         } catch (SQLException ex) {
-            Logger.getLogger(EstudianteGestion.class.getName()).
+            Logger.getLogger(EmpleadoGestion.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
         return false;
@@ -135,7 +135,7 @@ public class EmpleadoGestion {
             sentencia.setString(1, ""+empleado.getId());
             return sentencia.executeUpdate() > 0;
         } catch (SQLException ex) {
-            Logger.getLogger(EstudianteGestion.class.getName()).
+            Logger.getLogger(EmpleadoGestion.class.getName()).
                     log(Level.SEVERE, null, ex);
         }
         return false;

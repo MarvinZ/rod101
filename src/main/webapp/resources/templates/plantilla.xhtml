@@ -9,20 +9,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet library="css" name="default.css"/>
         <h:outputStylesheet library="css" name="cssLayout.css"/>
-        <title>Sistema Hotel CR</title>
+        <title>Sistema</title>
     </h:head>
     <h:body>
 
-        <div id="mySidenav" class="sidenav">
+<!--        <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">About</a>
             <a href="#{request.contextPath}/faces/galeria.xhtml">Galeria</a>
             <a href="#">Clients </a>
             <a href="#">Contact</a>
-        </div>
+        </div>-->
 
         <!-- Use any element to open the sidenav -->
-        <button onclick="openNav()"><b:icon value="cloud" /> </button>
+<!--        <button onclick="openNav()"><b:icon value="cloud" /> </button>-->
 
         <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
         <div id="main">
@@ -31,24 +31,18 @@
             <div id="top" class="top">
                 <ui:insert name="top">
                     <b:navBar class="nav" fluid="true" brand="Sistema" brand-href="#{request.contextPath}/faces/principal.xhtml">
-                        <b:navbarLinks pull="left">
-                            <b:image library="Images" name="hotel.png" style="height: 75px"/>
-                        </b:navbarLinks>
+                        <!--                        <b:navbarLinks pull="left">
+                                                    <b:image library="Images" name="hotel.png" style="height: 75px"/>
+                                                </b:navbarLinks>-->
                         <b:navbarLinks>
-                            <b:dropMenu value="Estudiantes" icon-awesome="fa-group">
-                                <b:navLink value="Gestión" icon-awesome="fa-newspaper-o" href="#{request.contextPath}/faces/cliente/list.xhtml"/>
-                            </b:dropMenu>
+
                             <b:dropMenu value="Empleados" icon-awesome="fa-group">
                                 <b:navLink value="Gestión" icon-awesome="fa-newspaper-o" href="#{request.contextPath}/faces/Empleados/list.xhtml"/>
                             </b:dropMenu>
-                      
-                            <b:dropMenu value="Profesores" icon-awesome="fa-group">
-                                <b:navLink value="Gestión" icon-awesome="fa-newspaper-o" href="#{request.contextPath}/faces/cliente/list3.xhtml"/>
-                            </b:dropMenu>
-                            
-                            
-                            <b:navLink value="Galeria"  href="#{request.contextPath}/faces/galeria.xhtml"/>
-                            <b:navLink value="Otros Hoteles"  href="#{request.contextPath}/faces/otrosHoteles.xhtml"/>
+
+
+
+
                         </b:navbarLinks>
                         <b:navbarLinks pull="right" style-class="hidden-xs">
                             <b:dropMenu value="#{usuarioController.idUsuario}" icon-awesome="fa-user">
